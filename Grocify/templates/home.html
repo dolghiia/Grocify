@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1 class="main-text">Welcome to Grocify!</h1>
+    <p class="main-text">Have you ever remembered what to put on your grocery list but your
+        grocery list was nowhere to be
+        found? <br>With Grocify, your grocery list is always with you wherever you go!</p>
+
+    <ul class="boxes">
+        <li>
+            <div class="box container">
+                <img class="home-images" src="{{ url_for('static', filename='save.png') }}">
+                <h3 class="box-text">Save</h3>
+                <p class="box-text">After you finished creating your grocery list, you can save it
+                on your device!</p>
+            </div>
+        </li>
+        <li>
+            <div class="box container">
+                <img class="home-images" src="{{ url_for('static', filename='add.png') }}">
+                <h3 class="box-text">Add</h3>
+                <p class="box-text">Enter the name of the item, the price, and the quantity
+                to add it your list!</p>
+            </div>
+        </li>
+        <li>
+            <div class="box container">
+                <img class="home-images" src="{{ url_for('static', filename='carticon.png') }}">
+                <h3 class="box-text">Create</h3>
+                <p class="box-text">You can create a new list or reset your old one for the next trip.</p>
+            </div>
+        </li>
+    </ul>
+
+{% endblock %}

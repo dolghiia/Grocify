@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1 class="main-text">Create Your List</h1>
+    <a class="site-links save-link view" href="/view" target="_blank">View</a>
+    <a class="site-links save-link" href="{{ url_for('static', filename='grocery_list.txt') }}" download>
+        <object src="/static/grocery_list.txt" alt="Save">Save</object></a>
+        <form class="reset-button" method="POST" action="">
+            {{ reset_form.hidden_tag() }}
+            {{ reset_form.reset_list(class="reset") }}
+        </form>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            <fieldset>
+                <p class="form-heading">Add something to your grocery list!</p>
+
+                <div class="forms">
+                    <p>Item</p>
+                    {{ form.item_name.label() }}
+                    {% if form.item_name.errors and not reset_form.reset_list.data %}
+                        {{ form.item_name() }}
+                        <div>
+                            <span class="error-message">
+                                Please enter the name of the item.</span>
+                        </div>
+                        {% else %}
+                            {{ form.item_name() }}
+                    {% endif %}
+                </div>
+
+                <div class="forms">
+                    <p>Price</p>
+                    {{ form.item_price.label() }}
+                    {% if form.item_price.errors and not reset_form.reset_list.data %}
+                        {{ form.item_price() }}
+                        <div>
+                            <span class="error-message">
+                                Please enter a valid price.</span>
+                        </div>
+                    {% else %}
+                        {{ form.item_price() }}
+                    {% endif %}
+                </div>
+
+                <div class="forms">
+                    <p>Quantity</p>
+                    {{ form.item_quantity.label() }}
+                    {% if form.item_quantity.errors and not reset_form.reset_list.data %}
+                        {{ form.item_quantity() }}
+                        <div>
+                            <span class="error-message">
+                                Please enter a valid quantity.</span>
+                        </div>
+                    {% else %}
+                        {{ form.item_quantity() }}
+                    {% endif %}
+                </div>
+
+                <div class="forms">
+                    {{ form.add_item(class="add") }}
+                </div>
+
+            </fieldset>
+
+        </form>
+    </div>
+{% endblock %}
+

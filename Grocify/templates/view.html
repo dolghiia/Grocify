@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocify - View List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="list-view">
+    <h1>My Grocery List</h1>
+    {% for item in grocery_items %}
+        <p><br>{{ item['Quantity'] }}&nbsp;{{ item['Name'] }}&nbsp;${{ item['Price'] }}</p>
+    {% endfor %}
+    <p><br>Total:&nbsp;${{ t_price }}&nbsp;&nbsp;&nbsp;
+        No.&nbsp;Items:&nbsp;{{ t_quantity }}</p>
+</body>
+
+</html>

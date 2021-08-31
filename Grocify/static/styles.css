@@ -1,0 +1,188 @@
+header {
+    background-color: #009900;
+    color: ghostwhite;
+    padding: 1px;
+    font-family: Futura;
+}
+
+.site-name {
+    float: left;
+}
+
+.pages {
+    float: left;
+    margin: 0;
+    padding: 3px;
+    list-style: none;
+}
+
+.page {
+    display: inline-block;
+    margin-left: 50px;
+    padding-top: 27px;
+    font-family: Futura;
+    font-size: 130%;
+}
+
+.site-links {
+    color: white;
+    text-decoration: none;
+}
+
+.site-links:hover {
+    color: lightgrey;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body {
+    margin:0;
+    background-color: #e6ffe6;
+    color: #009900;
+    font-family: Futura;
+}
+
+.main-text {
+    text-align: center;
+}
+
+.motto {
+    float: right;
+    margin-right: 100px;
+    padding-top: 17px;
+}
+
+.box {
+    float: right;
+    border: solid #009900;
+    background-color: white;
+}
+
+.container {
+    width: 350px;
+    margin-right: 90px;
+    margin-top: 75px;
+    display: inline-block;
+}
+
+.boxes {
+    list-style: none;
+}
+
+.box-text {
+    margin: 20px;
+}
+
+.home-images {
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+fieldset {
+    display: block;
+    border: solid white;
+    background-color: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+}
+
+.add {
+    width: 100%;
+    background-color: #009900;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Futura;
+}
+
+input[type=submit]:hover {
+    background-color: #008000;
+}
+
+.form-heading {
+    text-align: center;
+    font-weight: bold;
+}
+
+.forms {
+    font-weight: bold;
+}
+
+.error-message {
+    font-weight: normal;
+    color: red;
+    font-size: 70%;
+}
+
+.save-link {
+    float: top;
+    width: 1.3%;
+    color: #009900;
+    display: inline-flex;
+    font-size: large;
+    font-weight: bold;
+}
+
+.save-link:hover {
+    color: #008000;
+}
+
+.view {
+    margin-left: 25%;
+    margin-right: 6%;
+}
+
+.success {
+    margin: 25px 50px 0px 50px;
+    background-color: #d9d9d9;
+    border: 1px solid #bfbfbf;
+    color: #333333;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.reset {
+    border: none;
+    outline: none;
+    background: transparent no-repeat !important;
+    cursor: pointer;
+    color: #009900;
+    font-family: Futura;
+    font-weight: bold;
+    font-size: large;
+}
+
+.reset:hover {
+    background: transparent !important;
+    color: #008000;
+}
+
+.reset-button {
+    display: inline-flex;
+    float: top;
+    margin-left: 5%;
+}
+
+.list-view {
+    margin: 5% 15% 5% 15%;
+}
